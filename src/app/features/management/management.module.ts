@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { ManagementRoutingModule } from './management-routing.module';
+import { NgModule } from '@angular/core';
 import { ManagementComponent } from './management.component';
+import { ManagementRoutingModule } from './manangement-routing.module';
+
 
 
 @NgModule({

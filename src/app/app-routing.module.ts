@@ -5,24 +5,35 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () =>
-      import('./features/mfo/cockpit/cockpit.module').then(
-        (m) => m.CockpitModule
+      import('./features/cockpit/cockpit.module').then((m) => m.CockpitModule),
+  },
+  {
+    path: 'digital-letterbox',
+    loadChildren: () =>
+      import('./features/digital-letterbox/digital-letterbox.module').then(
+        (m) => m.DigitalLetterboxModule
       ),
   },
   {
-    path: 'mfo',
+    path: 'purchase-entry',
     loadChildren: () =>
-      import('./features/mfo/mfo.module').then((m) => m.MfoModule),
+      import('./features/purchase-entry/purchase-entry.module').then(
+        (m) => m.PurchaseEntryModule
+      ),
   },
   {
-    path: 'iba',
+    path: 'management',
     loadChildren: () =>
-      import('./features/iba/iba.module').then((m) => m.IbaModule),
+      import('./features/management/management.module').then(
+        (m) => m.ManagementModule
+      ),
   },
   {
-    path: 'mfp',
+    path: 'iba-digital-letterbox',
     loadChildren: () =>
-      import('./features/mfp/mfp.module').then((m) => m.MfpModule),
+      import(
+        './features/iba-digital-letterbox/iba-digital-letterbox.module'
+      ).then((m) => m.IbaDigitalLetterboxModule),
   },
 ];
 

@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DigitalLetterboxComponent } from './digital-letterbox.component';
+import { PurchaseEntryComponent } from './purchase-entry.component';
 
-describe('DigitalLetterboxComponent', () => {
-  let component: DigitalLetterboxComponent;
-  let fixture: ComponentFixture<DigitalLetterboxComponent>;
+describe('PurchaseEntryComponent', () => {
+  let component: PurchaseEntryComponent;
+  let fixture: ComponentFixture<PurchaseEntryComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DigitalLetterboxComponent ]
+      declarations: [ PurchaseEntryComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DigitalLetterboxComponent);
+    fixture = TestBed.createComponent(PurchaseEntryComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

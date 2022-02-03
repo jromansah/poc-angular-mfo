@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { DigitalLetterboxRoutingModule } from './digital-letterbox-routing.module';
+import { NgModule } from '@angular/core';
+import { DigitalRoutingModule } from './digital-letterbox-routing.module';
 import { DigitalLetterboxComponent } from './digital-letterbox.component';
+
 
 
 @NgModule({
@@ -11,7 +11,7 @@ import { DigitalLetterboxComponent } from './digital-letterbox.component';
   ],
   imports: [
     CommonModule,
-    DigitalLetterboxRoutingModule
+    DigitalRoutingModule
   ]
 })
 export class DigitalLetterboxModule { }

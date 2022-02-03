@@ -8,4 +8,4 @@ const routes: Routes = [{ path: '', component: DigitalLetterboxComponent }];
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class DigitalLetterboxRoutingModule { }
+export class DigitalRoutingModule { }
