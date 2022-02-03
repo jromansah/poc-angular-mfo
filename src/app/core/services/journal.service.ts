@@ -15,6 +15,7 @@ export class JournalService {
   constructor() {}
 
   getJournals(): Observable<Journal[]> {
+
     const journals: Journal[] = [
       {
         id: 1,

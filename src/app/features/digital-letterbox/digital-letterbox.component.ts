@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Journal } from 'src/app/core/services/journal.service';
 
 @Component({
   selector: 'app-digital-letterbox',
@@ -12,7 +13,7 @@ export class DigitalLetterboxComponent implements OnInit {
   constructor(private activeRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.journals = this.activeRoute.snapshot.data['journals'];
+    this.journals = this.activeRoute.snapshot.data['journals'] as Journal[];
   }
 
   navigateTo() {
