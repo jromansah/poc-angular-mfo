@@ -1,1 +1,10 @@
 <p>digital-letterbox works!</p>
+
+<ul>
+    <li *ngFor="let journal of journals">
+        {{journal?.name}}
+    </li>
+</ul>
+
+<a routerLink="" (click)="navigateTo()">navigate to current mfo app</a>
+
