@@ -1,10 +1,8 @@
-<p>digital-letterbox works!</p>
-
+<p>Journals:</p>
 <ul>
-    <li *ngFor="let journal of journals">
+    <li *ngFor="let journal of journalStoreService.journals$| async">
         {{journal?.name}}
     </li>
 </ul>
 
-<a routerLink="" (click)="navigateTo()">navigate to current mfo app</a>
-
+<app-digital-letterbox-control></app-digital-letterbox-control>

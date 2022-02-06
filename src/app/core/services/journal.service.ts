@@ -1,38 +1,35 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-
-// for testing put this interface here
-export interface Journal {
-  id: number;
-  name: string;
-  type: string;
-}
+import { Journal } from '../models/journal.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class JournalService {
+  private journals: Journal[] = [
+    {
+      name: 'journal 1',
+      type: 'a',
+    },
+    {
+      name: 'journal 2',
+      type: 'b',
+    },
+    {
+      name: 'journal 3',
+      type: 'c',
+    },
+  ];
+
   constructor() {}
 
-  getJournals(): Observable<Journal[]> {
+  // IRL we get data here from httpClient
+  get(): Observable<Journal[]> {
+    return of(this.journals);
+  }
 
-    const journals: Journal[] = [
-      {
-        id: 1,
-        name: 'journal 1',
-        type: 'a',
-      },
-      {
-        id: 2,
-        name: 'journal 2',
-        type: 'b',
-      },
-      {
-        id: 3,
-        name: 'journal 3',
-        type: 'c',
-      },
-    ];
-    return of(journals);
+  add(j: Journal): Observable<Journal[]> {
+    this.journals.push(j);
+    return of(this.journals);
   }
 }

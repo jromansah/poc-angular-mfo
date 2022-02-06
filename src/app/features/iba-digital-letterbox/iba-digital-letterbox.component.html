@@ -1,1 +1,8 @@
-<p>iba-digital-letterbox works!</p>
+<ul>
+    <li *ngFor="let report of reports">
+        {{report?.name}}
+    </li>
+</ul>
+
+<a routerLink="" (click)="navigateTo()">navigate to current mfo app</a>
+

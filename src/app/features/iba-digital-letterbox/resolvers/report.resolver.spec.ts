@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
+import { ReportResolver } from './report.resolver';
 
-import { JournalResolver } from './journal.resolver';
 
 describe('JournalResolver', () => {
-  let resolver: JournalResolver;
+  let resolver: ReportResolver;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    resolver = TestBed.inject(JournalResolver);
+    resolver = TestBed.inject(ReportResolver);
   });
 
   it('should be created', () => {
